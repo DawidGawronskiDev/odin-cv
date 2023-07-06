@@ -4,21 +4,21 @@
   font-weight: 300;
   font-family: "Roboto", sans-serif;
 }
-
-main {
+#root > main {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 50vw);
+  grid-template-columns: repeat(2, 1fr);
   margin: 32px;
 }
 
 @media only screen and (max-width: 1024px) {
-  main {
+  #root > main {
     grid-template-columns: 1fr;
   }
 }
 
 form {
   margin: 32px;
+  /* display: none; */
 }
 
 legend {
@@ -63,4 +63,29 @@ input[placeholder="Last Name"],
 input[placeholder="From"],
 input[placeholder="To"] {
   grid-column: span 1;
+}
+
+.prev {
+  margin: 32px;
+}
+
+.cv {
+  position: sticky;
+  top: 64px;
+  aspect-ratio: 1 / 1.41;
+
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+}
+
+aside {
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+aside li {
+  margin: 0 0 8px 0;
 }
