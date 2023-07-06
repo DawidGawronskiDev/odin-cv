@@ -1,8 +1,17 @@
 import React from "react";
 
-function Form() {
+import PersonalInfoInput from "./PersonalInfoInput";
+
+function Form({
+    personalInfo,
+    changePersonalInfo}) {
     return (
-        <h1>I'm Form</h1>
+        <form>
+            <PersonalInfoInput 
+                personalInfo={personalInfo}
+                changePersonalInfo={changePersonalInfo}
+            />
+        </form>
     )
 }
 
