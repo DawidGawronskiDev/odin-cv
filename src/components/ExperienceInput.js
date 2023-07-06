@@ -6,6 +6,10 @@ function ExperienceInput({
     addExperience,
     deleteExperience}) {
 
+    const handleChangeExperience = (index, propertyName, e) => {
+        changeExperience(index, propertyName, e)
+    }
+
     const handleAddExperience = () => {
         addExperience();
     }
@@ -20,31 +24,31 @@ function ExperienceInput({
             {
                 experience.map((place, index) => {
                     return (
-                        <div>
+                        <div key={index}>
                             <input 
                                 type="text" 
                                 placeholder="Position"
-                                onChange={(e) =>changeExperience(index, "position", e)}
+                                onChange={(e) => handleChangeExperience(index, "position", e)}
                             />
                             <input 
                                 type="text" 
-                                placeholder="Comapny"
-                                onChange={(e) =>changeExperience(index, "company", e)}
+                                placeholder="Company"
+                                onChange={(e) => handleChangeExperience(index, "company", e)}
                             />
                             <input 
                                 type="text" 
                                 placeholder="City"
-                                onChange={(e) =>changeExperience(index, "city", e)}
+                                onChange={(e) => handleChangeExperience(index, "city", e)}
                             />
                             <input 
                                 type="text" 
                                 placeholder="From"
-                                onChange={(e) =>changeExperience(index, "Form", e)}
+                                onChange={(e) => handleChangeExperience(index, "from", e)}
                             />
                             <input 
                                 type="text" 
                                 placeholder="To"
-                                onChange={(e) =>changeExperience(index, "to", e)}
+                                onChange={(e) => handleChangeExperience(index, "to", e)}
                             />
                             <button 
                                 type="button"
