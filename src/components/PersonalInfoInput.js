@@ -1,6 +1,6 @@
 import React from "react";
 
-function PersonalInfoInput({ personalInfo, changePersonalInfo }) {
+function PersonalInfoInput({ changePersonalInfo }) {
   return (
     <fieldset>
       <legend>Personal Info</legend>
@@ -31,6 +31,10 @@ function PersonalInfoInput({ personalInfo, changePersonalInfo }) {
         maxLength={13}
         placeholder="Email"
         onChange={(e) => changePersonalInfo("email", e)}
+      />
+      <textarea
+        placeholder="Description"
+        onChange={(e) => changePersonalInfo("desc", e)}
       />
     </fieldset>
   );
