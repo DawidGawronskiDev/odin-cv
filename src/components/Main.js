@@ -23,6 +23,16 @@ class Main extends Component {
                     from: "",
                     to: "",
                 }
+            ],
+            education: [
+                {
+                    school: "",
+                    subject: "",
+                    degree: "",
+                    city: "",
+                    from: "",
+                    to: ""
+                }
             ]
         }
     }
@@ -69,6 +79,40 @@ class Main extends Component {
         })
     }
 
+    changeEducation = (index, properyName, e) => {
+        const updatedEducation = this.state.education;
+        updatedEducation[index][properyName] = e.target.value;
+
+        this.setState({
+            education: updatedEducation,
+        })
+    }
+
+    addEducation = () => {
+        const updatedEducation = 
+            [...this.state.education, {
+                school: "",
+                subject: "",
+                degree: "",
+                city: "",
+                from: "",
+                to: "",
+            }];
+
+        this.setState({
+            education: updatedEducation,
+        })
+    }
+
+    deleteEducation = (index) => {
+        const updatedEducation = [...this.state.education];
+        updatedEducation.splice(index, 1);
+
+        this.setState({
+            education: updatedEducation,
+        })
+    }
+
     render() {
         return (
             <main>
@@ -81,10 +125,16 @@ class Main extends Component {
                     changeExperience={this.changeExperience}
                     addExperience={this.addExperience}
                     deleteExperience={this.deleteExperience}
+                    // education
+                    education={this.state.education}
+                    changeEducation={this.changeEducation}
+                    addEducation={this.addEducation}
+                    deleteEducation={this.deleteEducation}
                 />
                 <Prev 
                     personalInfo={this.state.personalInfo}
                     experience={this.state.experience}
+                    education={this.state.education}
                 />
             </main>
         )

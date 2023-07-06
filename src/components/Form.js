@@ -2,6 +2,7 @@ import React from "react";
 
 import PersonalInfoInput from "./PersonalInfoInput"
 import ExperienceInput from "./ExperienceInput";
+import EducationInput from "./EducationInput";
 
 function Form({
     personalInfo,
@@ -9,7 +10,11 @@ function Form({
     experience,
     changeExperience,
     addExperience,
-    deleteExperience}) {
+    deleteExperience,
+    education,
+    changeEducation,
+    addEducation,
+    deleteEducation}) {
     return (
         <form>
             <PersonalInfoInput 
@@ -21,6 +26,12 @@ function Form({
                 changeExperience={changeExperience}
                 addExperience={addExperience}
                 deleteExperience={deleteExperience}
+            />
+            <EducationInput
+                education={education}
+                changeEducation={changeEducation}
+                addEducation={addEducation}
+                deleteEducation={deleteEducation}
             />
         </form>
     )
