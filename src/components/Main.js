@@ -118,6 +118,44 @@ class Main extends Component {
     });
   };
 
+  loadExample = () => {
+    const updatedInfo = {
+      personalInfo: {
+        firstName: "John",
+        lastName: "Doe",
+        address: "Example Street 21",
+        phone: "123456789",
+        email: "johndoe@gmail.com",
+        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      },
+      experience: [
+        {
+          position: "Senior Web Developer",
+          company: "Krusty Krab",
+          city: "Bikini Bottom",
+          from: "2018",
+          to: "Present",
+        },
+      ],
+      education: [
+        {
+          school: "Manchester University",
+          subject: "Computer Science",
+          degree: "Master",
+          city: "Manchester",
+          from: "2015",
+          to: "2018",
+        },
+      ],
+    };
+
+    this.setState({
+      personalInfo: updatedInfo.personalInfo,
+      experience: updatedInfo.experience,
+      education: updatedInfo.education,
+    });
+  };
+
   render() {
     const { personalInfo, experience, education } = this.state;
 
@@ -137,6 +175,8 @@ class Main extends Component {
           changeEducation={this.changeEducation}
           addEducation={this.addEducation}
           deleteEducation={this.deleteEducation}
+          // load example
+          loadExample={this.loadExample}
         />
         <Prev
           personalInfo={personalInfo}

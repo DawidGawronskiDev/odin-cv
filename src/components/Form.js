@@ -3,6 +3,7 @@ import React from "react";
 import PersonalInfoInput from "./PersonalInfoInput";
 import ExperienceInput from "./ExperienceInput";
 import EducationInput from "./EducationInput";
+import LoadExampleBtn from "./LoadExampleBtn";
 
 function Form({
   personalInfo,
@@ -15,6 +16,7 @@ function Form({
   changeEducation,
   addEducation,
   deleteEducation,
+  loadExample,
 }) {
   return (
     <form>
@@ -34,6 +36,7 @@ function Form({
         addEducation={addEducation}
         deleteEducation={deleteEducation}
       />
+      <LoadExampleBtn loadExample={loadExample} />
     </form>
   );
 }
