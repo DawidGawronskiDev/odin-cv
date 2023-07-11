@@ -20,6 +20,12 @@ function PersonalInfoInput({ personalInfo, changePersonalInfo }) {
       />
       <input
         type="text"
+        placeholder="Title"
+        value={personalInfo.lastName}
+        onChange={(e) => changePersonalInfo("title", e)}
+      />
+      <input
+        type="text"
         placeholder="Address"
         value={personalInfo.address}
         onChange={(e) => changePersonalInfo("address", e)}
@@ -32,7 +38,6 @@ function PersonalInfoInput({ personalInfo, changePersonalInfo }) {
       />
       <input
         type="text"
-        maxLength={13}
         placeholder="Email"
         value={personalInfo.email}
         onChange={(e) => changePersonalInfo("email", e)}

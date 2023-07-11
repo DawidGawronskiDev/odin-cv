@@ -9,6 +9,7 @@ function Prev({ personalInfo, experience, education }) {
             <h1>
               {personalInfo.firstName} {personalInfo.lastName}
             </h1>
+            <h2>{personalInfo.title}</h2>
           </div>
 
           <ul>

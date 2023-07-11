@@ -11,6 +11,7 @@ class Main extends Component {
       personalInfo: {
         firstName: "",
         lastName: "",
+        title: "",
         address: "",
         phone: "",
         email: "",
@@ -123,6 +124,7 @@ class Main extends Component {
       personalInfo: {
         firstName: "John",
         lastName: "Doe",
+        title: "Junior Web Developer",
         address: "Example Street 21",
         phone: "123456789",
         email: "johndoe@gmail.com",
