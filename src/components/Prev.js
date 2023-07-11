@@ -19,21 +19,41 @@ function Prev({ personalInfo, experience, education }) {
 
           <div>
             <h3>Description</h3>
-            <p>{personalInfo.desc}</p>
+            <blockquote>{personalInfo.desc}</blockquote>
           </div>
         </aside>
 
         <main>
           <h3>Experience</h3>
           <ul>
-            {experience.map((place) => {
+            {experience.map((place, index) => {
               return (
-                <li>
-                  <span>{place.position}</span>
-                  <div>
+                <li key={index}>
+                  <h4>{place.position}</h4>
+                  <div className="inline">
                     <span>
                       {place.company}, {place.city}
                     </span>
+                    <span>
+                      {place.from} - {place.to}
+                    </span>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+
+          <h3>Education</h3>
+          <ul>
+            {education.map((place, index) => {
+              return (
+                <li key={index}>
+                  <h4>{place.school}</h4>
+                  <div className="inline">
+                    <div>
+                      <p>Subject: {place.subject}</p>
+                      <p>Degree: {place.degree}</p>
+                    </div>
                     <span>
                       {place.from} - {place.to}
                     </span>

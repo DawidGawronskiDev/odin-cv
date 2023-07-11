@@ -42,6 +42,29 @@ textarea {
   height: 64px;
 }
 
+/* ############### CV MAIN ############### */
+
+.cv > main {
+  margin: 16px;
+}
+
+.cv ul {
+  max-width: 100%;
+}
+
+.cv li {
+  width: 100%;
+  word-break: keep-all;
+}
+
+.cv > main li {
+  margin: 0 0 16px 0;
+}
+
+.cv > main ul {
+  margin: 16px 0 0 0;
+}
+
 /* ############### LAYOUT ############### */
 
 fieldset,
@@ -66,12 +89,11 @@ input[placeholder="To"] {
 }
 
 .prev {
-  margin: 32px;
+  aspect-ratio: 1 / 1.41;
+  margin: 16px;
 }
 
 .cv {
-  position: sticky;
-  top: 64px;
   aspect-ratio: 1 / 1.41;
 
   display: grid;
@@ -88,4 +110,46 @@ aside {
 
 aside li {
   margin: 0 0 8px 0;
+}
+
+/* ############### GENERAL ############### */
+
+h1,
+h2,
+h3 {
+  display: inline;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0 0 8px 0;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.inline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  opacity: 0.7;
 }
